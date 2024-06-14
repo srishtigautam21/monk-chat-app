@@ -101,7 +101,7 @@ const data = [
     profilePictureURL: kate,
     chat: [
       {
-        user2: {
+        user3: {
           message: "that burger was delicious!",
           timeStamp: "13:12",
         },
@@ -111,7 +111,7 @@ const data = [
         },
       },
       {
-        user2: {
+        user3: {
           message: "We are definetely going to that place again.",
           timeStamp: "13:13",
         },
@@ -121,7 +121,7 @@ const data = [
         },
       },
       {
-        user2: {
+        user3: {
           message: "haha, I bet. Lets take Tony and Natasha too next time",
           timeStamp: "13:14",
         },
