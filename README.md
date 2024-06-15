@@ -1,7 +1,5 @@
 ## Monk Chat App
 
-- https://monk-chat-app.vercel.app/chats/user1
-
 ### About
 
 This project is a web application built using the ReactJs library. It demonstrates the skills of working with nested array of objects, handling state, managing UI components, and implementing error handling.
