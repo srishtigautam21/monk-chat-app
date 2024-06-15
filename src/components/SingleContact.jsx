@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { useChatContext } from "../context/chatContext";
 import Modal from "./Modal";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SingleContact = ({ contact, index }) => {
-  const { modal, setModal, setModalId, modalId } = useChatContext();
-  //   const [modalId, setModalId] = useState("");
+  const {
+    modal,
+    setModal,
+    setModalId,
+    modalId,
+    isMobile,
+    selected,
+    setSelected,
+    chatData,
+  } = useChatContext();
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (window.innerWidth > 768 && selected === "user1") {
+      navigate(`chats/${chatData[0].userId}`, { state: chatData[0] });
+    }
+  }, []);
 
   const handleModal = (e) => {
     e.stopPropagation();
@@ -14,15 +29,24 @@ const SingleContact = ({ contact, index }) => {
     setModalId(contact.userId);
   };
   return (
-    <div className='flex p-3 items-center justify-between gap-2 h-[64px] relative hover:bg-slate-200'>
-      <Link to={`/chats/${contact.userId}`} state={contact}>
+    <div
+      className='flex p-3 items-center justify-between gap-2 h-[64px] relative hover:bg-slate-100'
+      style={{
+        backgroundColor: selected === contact.userId ? "rgb(226 232 240) " : "",
+      }}
+    >
+      {/* to={isMobile ? `/chats/${contact.userId}` : `/chats/${contact.userId}`} */}
+      <Link
+        to={`/chats/${contact.userId}`}
+        state={contact}
+        onClick={() => setSelected(contact.userId)}
+      >
         <div className='flex gap-1 items-center'>
           <img
             className='w-[52px] h-[52px] rounded-[50%] object-cover'
             src={contact.profilePictureURL}
             alt={contact.name}
           />
-          {/* Add the small green circle */}
           <div>
             <div className='font-[MyFont] font-semibold text-[20px] leading-5'>
               {contact.name}
@@ -50,7 +74,7 @@ const SingleContact = ({ contact, index }) => {
         </button>
       </div>
 
-      {modal && modalId === `user${index}` ? <Modal /> : ""}
+      {modal && modalId === `user${index}` ? <Modal modalId={modalId} /> : ""}
     </div>
   );
 };

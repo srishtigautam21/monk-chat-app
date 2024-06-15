@@ -8,8 +8,6 @@ const data = [
     name: "Sam",
     unreadCount: 1,
     profilePictureURL: sam,
-    // profilePictureURL:
-    //   "https://www.pexels.com/photo/portrait-photo-of-smiling-man-with-his-arms-crossed-standing-in-front-of-a-wall-2379004/",
     chat: [
       {
         user1: {
@@ -59,7 +57,6 @@ const data = [
     name: "Elon",
     unreadCount: 0,
     profilePictureURL: elon,
-    //   "https://www.pexels.com/photo/man-in-brown-polo-shirt-614810/",
     chat: [
       {
         user2: {
@@ -97,7 +94,6 @@ const data = [
     userId: "user3",
     name: "Kate",
     unreadCount: 1,
-    // "https://www.pexels.com/photo/closeup-photo-of-woman-with-brown-coat-and-gray-top-733872/"
     profilePictureURL: kate,
     chat: [
       {
