@@ -8,7 +8,7 @@ This project is a web application built using the ReactJs library. It demonstrat
 
 - A modal opens when the user clicks on the three dots :
 
-  - On the click of the "mark as unread" - Unread Count moves back to original number of unread messages
+  - On the click of the "mark as unread" - Unread Count moves back to the original number of unread messages
   - On delete a conversation is deleted
   - On Cancel close the modal.
 
@@ -31,7 +31,7 @@ This project is a web application built using the ReactJs library. It demonstrat
 - Run the Application:
 
 ##
-    npm run serve
+    npm run dev
 
 - Build the Application for Production:
 
