@@ -1,6 +1,6 @@
 ## Monk Chat App
 
-- [Live Url](https://monk-chat-app.vercel.app/chats/user1)
+- https://monk-chat-app.vercel.app/chats/user1
 
 ### About
 
