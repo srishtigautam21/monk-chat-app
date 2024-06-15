@@ -73,19 +73,19 @@ const ChatComponent = () => {
         {contact.chat.map((chat, index) => {
           return (
             <div key={index}>
-              <div className='flex justify-end '>
-                <div className='bg-[#DCF7C5] rounded-[40px] p-4 w-[70%] m-2'>
-                  <div className='text-black'>{chat.you.message}</div>
-                  <div className='text-right text-[grayText]'>
-                    {chat.you.timeStamp}
-                  </div>
-                </div>
-              </div>
               <div className='flex justify-start'>
                 <div className='bg-slate-100 rounded-3xl p-4 w-[70%] m-2'>
                   <div className='text-black'>{chat[`${id}`].message}</div>
                   <div className='text-right text-[grayText]'>
                     {chat[`${id}`].timeStamp}
+                  </div>
+                </div>
+              </div>
+              <div className='flex justify-end '>
+                <div className='bg-[#DCF7C5] rounded-[40px] p-4 w-[70%] m-2'>
+                  <div className='text-black'>{chat.you.message}</div>
+                  <div className='text-right text-[grayText]'>
+                    {chat.you.timeStamp}
                   </div>
                 </div>
               </div>

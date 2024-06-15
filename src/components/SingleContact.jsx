@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { useChatContext } from "../context/chatContext";
 import Modal from "./Modal";
@@ -10,7 +10,6 @@ const SingleContact = ({ contact, index }) => {
     setModal,
     setModalId,
     modalId,
-    isMobile,
     selected,
     setSelected,
     chatData,
@@ -28,6 +27,9 @@ const SingleContact = ({ contact, index }) => {
     setModal((open) => !open);
     setModalId(contact.userId);
   };
+
+  let string = contact.chat[contact.chat.length - 1].you.message;
+  let slicedString = string.slice(0, 14);
   return (
     <div
       className='flex p-3 items-center justify-between gap-2 h-[64px] relative hover:bg-slate-100'
@@ -35,7 +37,6 @@ const SingleContact = ({ contact, index }) => {
         backgroundColor: selected === contact.userId ? "rgb(226 232 240) " : "",
       }}
     >
-      {/* to={isMobile ? `/chats/${contact.userId}` : `/chats/${contact.userId}`} */}
       <Link
         to={`/chats/${contact.userId}`}
         state={contact}
@@ -51,7 +52,8 @@ const SingleContact = ({ contact, index }) => {
             <div className='font-[MyFont] font-semibold text-[20px] leading-5'>
               {contact.name}
             </div>
-            <div className='text-[grayText]'>I think top two are:</div>
+            {/* I think top two are: */}
+            <div className='text-[grayText]'>{slicedString}...</div>
           </div>
         </div>
       </Link>

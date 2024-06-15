@@ -3,8 +3,6 @@ import { MdChevronLeft } from "react-icons/md";
 import { useChatContext } from "../context/chatContext";
 import SingleContact from "./SingleContact";
 
-import Modal from "./Modal";
-
 const Contacts = () => {
   const { chatData } = useChatContext();
 
