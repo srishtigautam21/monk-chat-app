@@ -21,7 +21,7 @@ This project is a web application built using the ReactJs library. It demonstrat
 - Clone the Repository:
 
 ##
-    git clone git@github.com/srishtigautam21/monk-chat-app.git cd chat-app-monk
+    git clone git@github.com/srishtigautam21/monk-chat-app.git 
 
 - Install Dependencies:
 
